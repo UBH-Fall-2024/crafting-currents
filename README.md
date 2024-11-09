@@ -55,9 +55,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Special thanks to the Minecraft modding community and UB hacking for hosting this event!
 
-
-
-
-
-
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_U2QbDVP)
