@@ -19,16 +19,20 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CraftingCurentsMod.MOD_ID);
 
-   //EXAMPLE BLOCK CAN DELETE USE AS REF
-    public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
+    //EXAMPLE BLOCK CAN DELETE USE AS REF
+    public static final RegistryObject<Block> ALEXANDRITE_BLOCK  = registerBlock("alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-
 
     //EXAMPLE BLOCK CAN DELETE USE AS REF
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
+
+    // 2 redstone input 2 blue output block
+    public static final RegistryObject<Block> REDSTONE_CONVERTER= registerBlock("redstone_converter",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops().instabreak()));
 
     //CALL THIS METHOD WHEN CREATING NEW BLOCKS
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
