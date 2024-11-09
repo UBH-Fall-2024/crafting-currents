@@ -30,6 +30,15 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
 
+    /* This Is the bi signal bus
+    * --------------------------
+    * */
+    public static final RegistryObject<Block> BI_SIGNAL_BUS = registerBlock("raw_alexandrite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .instabreak()));
+    /*---------------------------
+    end*/
+
     //CALL THIS METHOD WHEN CREATING NEW BLOCKS
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
