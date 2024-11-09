@@ -15,15 +15,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(CraftyCurentsMod.MOD_ID)
-public class CraftyCurentsMod
+@Mod(CraftingCurentsMod.MOD_ID)
+public class CraftingCurentsMod
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "craftingCurrents";
+    public static final String MOD_ID = "crafting_currents";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public CraftyCurentsMod(FMLJavaModLoadingContext context)
+    public CraftingCurentsMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
