@@ -97,13 +97,4 @@ public class RedstoneConverter extends Block {
             level.setBlock(pos, state.setValue(LEFT_SIGNAL, leftSignal).setValue(RIGHT_SIGNAL, rightSignal), 2);
         }
     }
-
-    
-    public void updateSignal(Level level, BlockPos pos, int newPower) {
-        BlockState state = level.getBlockState(pos); // Get the current state of the block
-        if (state.getValue(POWER) != newPower) { // Check if the current power level differs from the new one
-            level.setBlock(pos, state.setValue(POWER, newPower), 3); // Update the block state and notify neighbors
-        }
-    }
-
 }
