@@ -1,6 +1,6 @@
 # Crafting Current!
 
-Welcome to the **Crafting Current** redstone expansion Minecraft mod! This mod enhances Minecraft’s redstone system, adding a suite of logic functions to empower players with more complex and versatile contraptions. With this mod, players can create more advanced circuits, automate tasks more efficiently, and unlock new possibilities in redstone engineering.
+TESTING THOMAS:: Welcome to the **Crafting Current** redstone expansion Minecraft mod! This mod enhances Minecraft’s redstone system, adding a suite of logic functions to empower players with more complex and versatile contraptions. With this mod, players can create more advanced circuits, automate tasks more efficiently, and unlock new possibilities in redstone engineering.
 
 ## Project Description
 
