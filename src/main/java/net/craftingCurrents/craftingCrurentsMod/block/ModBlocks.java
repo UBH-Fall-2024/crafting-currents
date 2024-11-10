@@ -35,6 +35,10 @@ public class ModBlocks {
             () -> new RedstoneConverter(BlockBehaviour.Properties.of()
                    .instabreak()));
 
+    // 2 blue input, pass through, and red output on block
+    public static final RegistryObject<Block> BI_SIGNAL_CONVERTER= registerBlock("bi_signal_converter",
+            () -> new RedstoneConverter(BlockBehaviour.Properties.of()
+                    .instabreak()));
     //CALL THIS METHOD WHEN CREATING NEW BLOCKS
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
