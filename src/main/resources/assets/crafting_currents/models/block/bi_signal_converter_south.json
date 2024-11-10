@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "crafting_currents:block/bi_signalconverter.",
-    "bottom": "crafting_currents:block/furnace_top",
-    "side": "crafting_currents:block/observer_side"
+    "top": "crafting_currents:block/bi_sig_converter",
+    "bottom": "crafting_currents:block/workbench",
+    "side": "crafting_currents:block/workbench"
   },
   "elements": [
     {

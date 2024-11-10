@@ -30,6 +30,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
 
+ public static final RegistryObject<Block> BI_SIGNAL_BUS = registerBlock("bi_signal_bus",
+            () -> new Block(BlockBehaviour.Properties.of().instabreak()));
+
     // 2 redstone input 2 blue output block
     public static final RegistryObject<Block> REDSTONE_CONVERTER= registerBlock("redstone_converter",
             () -> new RedstoneConverter(BlockBehaviour.Properties.of()

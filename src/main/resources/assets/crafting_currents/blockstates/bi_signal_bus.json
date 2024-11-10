@@ -1,0 +1,7 @@
+{
+    "variants": {
+      "": {
+        "model": "crafting_currents:block/bi_signal_bus"
+      }
+    }
+  }
