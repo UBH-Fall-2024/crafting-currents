@@ -1,7 +1,9 @@
 package net.craftingCurrents.craftingCrurentsMod.block;
 
 import net.craftingCurrents.craftingCrurentsMod.CraftingCurentsMod;
+import net.craftingCurrents.craftingCrurentsMod.block.custom.Bi_Signal_Converter;
 import net.craftingCurrents.craftingCrurentsMod.block.custom.RedstoneConverter;
+import net.craftingCurrents.craftingCrurentsMod.block.custom.bi_signal_bus;
 import net.craftingCurrents.craftingCrurentsMod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -31,7 +33,7 @@ public class ModBlocks {
                     .strength(3f).requiresCorrectToolForDrops()));
 
  public static final RegistryObject<Block> BI_SIGNAL_BUS = registerBlock("bi_signal_bus",
-            () -> new Block(BlockBehaviour.Properties.of().instabreak()));
+            () -> new bi_signal_bus(BlockBehaviour.Properties.of().instabreak()));
 
     // 2 redstone input 2 blue output block
     public static final RegistryObject<Block> REDSTONE_CONVERTER= registerBlock("redstone_converter",
@@ -40,7 +42,7 @@ public class ModBlocks {
 
     // 2 blue input, pass through, and red output on block
     public static final RegistryObject<Block> BI_SIGNAL_CONVERTER= registerBlock("bi_signal_converter",
-            () -> new RedstoneConverter(BlockBehaviour.Properties.of()
+            () -> new Bi_Signal_Converter(BlockBehaviour.Properties.of()
                     .instabreak()));
     //CALL THIS METHOD WHEN CREATING NEW BLOCKS
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

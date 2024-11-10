@@ -51,11 +51,13 @@ public class bi_signal_bus extends Block {
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         if (!level.isClientSide) {
             Direction facingDirection = state.getValue(FACING);
-            Direction leftSide = facingDirection.getCounterClockWise();
-            Direction rightSide = facingDirection.getClockWise();
-            boolean newLeftSignal = level.hasSignal(pos.relative(leftSide), leftSide);
-            boolean newRightSignal = level.hasSignal(pos.relative(rightSide), rightSide);
+            Direction backside = facingDirection.getOpposite();
+            Boolean[] signals = checkSignalsFromAdjacentBlock(level, pos, backside);
+            Boolean newLeftSignal = signals[0];
+            Boolean newRightSignal = signals[1];
 
+            
+            checkSignalsFromAdjacentBlock(level, pos, facingDirection);
             // Only update if the signals have changed
             if (newLeftSignal != state.getValue(LEFT_SIGNAL) || newRightSignal != state.getValue(RIGHT_SIGNAL)) {
                 level.setBlockAndUpdate(pos, state.setValue(LEFT_SIGNAL, newLeftSignal).setValue(RIGHT_SIGNAL, newRightSignal));
