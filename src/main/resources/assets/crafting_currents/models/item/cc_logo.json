@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "crafting_currents:item/menu/Creative_menu"
+    "layer0": "crafting_currents:item/cc_logo"
   }
 }
