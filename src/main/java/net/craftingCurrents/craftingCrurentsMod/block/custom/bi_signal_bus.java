@@ -59,30 +59,27 @@ public class bi_signal_bus extends Block {
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         if (!level.isClientSide) { // Only run this logic on the server side
-
-            //This gets the block thats behind the current block
+    
+            // Get the block’s facing direction
             Direction facingDirection = state.getValue(FACING);
-            Direction southDirection = facingDirection.getOpposite();
-            
-            //This gets the coords of the block behind the current block, then gets the block
-            BlockPos southPos = pos.relative(southDirection);
-            BlockState southState = level.getBlockState(southPos);
-
-            //This is to check if the block behind me has signals running into the current block
-            Boolean left_Signal = southState.hasProperty(LEFT_SIGNAL);
-            Boolean right_Signal = southState.hasProperty(RIGHT_SIGNAL);
-            
-            if (left_Signal){
-                // Update block state if the signal has changed on either side
-                level.setBlock(pos, state.setValue(LEFT_SIGNAL, southState.getValue(LEFT_SIGNAL)), 3) ;
+            Direction leftSide = facingDirection.getClockWise();
+            Direction rightSide = facingDirection.getCounterClockWise();
+    
+            // Check signals on left and right sides relative to the block's facing direction
+            boolean newLeftSignal = level.hasSignal(pos.relative(leftSide), leftSide);
+            boolean newRightSignal = level.hasSignal(pos.relative(rightSide), rightSide);
+    
+            // Only update if the signals have changed
+            boolean currentLeftSignal = state.getValue(LEFT_SIGNAL);
+            boolean currentRightSignal = state.getValue(RIGHT_SIGNAL);
+    
+            // Update the block state without causing recursive neighbor updates
+            if (newLeftSignal != currentLeftSignal) {
+                level.setBlockAndUpdate(pos, state.setValue(LEFT_SIGNAL, newLeftSignal));
             }
-            
-            if (right_Signal){
-                // Update block state if the signal has changed on either side
-                level.setBlock(pos, state.setValue(RIGHT_SIGNAL, southState.getValue(RIGHT_SIGNAL)), 3) ;
+            if (newRightSignal != currentRightSignal) {
+                level.setBlockAndUpdate(pos, state.setValue(RIGHT_SIGNAL, newRightSignal));
             }
-
-            // Update block state if the signal has changed on either side
         }
     }
 

@@ -1,0 +1,13 @@
+{
+  "item.crafting_currents.alexandrite": "Alexandrite Gem",
+  "item.crafting_currents.raw_alexandrite": "Raw Alexandrite",
+
+  "block.crafting_currents.alexandrite_block": "Block of Alexandrite",
+  "block.crafting_currents.raw_alexandrite_block": "Block of Raw Alexandrite",
+  "block.crafting_currents.bi_signal_bus": "Bi-Signal Bus",
+
+  "block.crafting_currents.redstone_converter": "Redstone Converter Block",
+  "block.crafting_currents.bi_signal_converter": "Bi Signal Converter",
+  "creativetab.craftingcurrentsmod.craftingcurrents_items" : "CraftingCurrents Items",
+  "creativetab.craftingcurrentsmod.craftingcurrents_block" : "CraftingCurrents Blocks"
+}

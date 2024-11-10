@@ -32,7 +32,7 @@ public class ModBlocks {
 
     // This Is the bi signal bus
     /*---------------------------*/
-    public static final RegistryObject<Block> BI_SIGNAL_BUS = registerBlock("raw_alexandrite_block",
+    public static final RegistryObject<Block> BI_SIGNAL_BUS = registerBlock("bi_signal_bus",
             () -> new Block(BlockBehaviour.Properties.of()
                     .instabreak()));
     /*---------------------------*/
