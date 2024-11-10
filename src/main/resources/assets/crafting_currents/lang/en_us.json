@@ -5,6 +5,7 @@
   "block.crafting_currents.alexandrite_block": "Block of Alexandrite",
   "block.crafting_currents.raw_alexandrite_block": "Block of Raw Alexandrite",
   "block.crafting_currents.redstone_converter": "Redstone Converter Block",
+  "block.crafting_currents.bi_signal_bus": "Bi-Signal Bus",
 
   "creativetab.craftingcurrentsmod.craftingcurrents_items" : "CraftingCurrents Items",
   "creativetab.craftingcurrentsmod.craftingcurrents_block" : "CraftingCurrents Blocks"
