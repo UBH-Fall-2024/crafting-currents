@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all" :"crafting_currents:block/bi_signal_bus"
+    }
+}

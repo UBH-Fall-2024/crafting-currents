@@ -64,12 +64,8 @@ public class CraftingCurentsMod
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
-<<<<<<< HEAD
             event.accept(ModBlocks.BI_SIGNAL_BUS);
-
-=======
             event.accept(ModBlocks.REDSTONE_CONVERTER);
->>>>>>> 64ad2e000b8d4b11a8f740b1f14744073ebdf09a
         }
 
     }
