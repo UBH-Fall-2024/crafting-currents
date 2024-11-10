@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "crafting_currents:block/bi_signal_converter_north"
+    },
+    "facing=south": {
+      "model": "crafting_currents:block/bi_signal_converter_south"
+    },
+    "facing=east": {
+      "model": "crafting_currents:block/bi_signal_converter_east"
+    },
+    "facing=west": {
+      "model": "crafting_currents:block/bi_signal_converter_west"
+    }
+  }
+}
