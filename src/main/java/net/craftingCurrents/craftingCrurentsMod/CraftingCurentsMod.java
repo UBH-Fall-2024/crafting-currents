@@ -68,6 +68,7 @@ public class CraftingCurentsMod
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.REDSTONE_CONVERTER);
+            event.accept(ModBlocks.BI_SIGNAL_CONVERTER);
         }
 
     }
