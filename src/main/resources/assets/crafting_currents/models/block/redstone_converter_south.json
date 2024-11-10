@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "crafting_currents:block/observer_top",
+    "top": "crafting_currents:block/bi_redstonedistributer",
     "bottom": "crafting_currents:block/furnace_top",
     "side": "crafting_currents:block/observer_side"
   },
