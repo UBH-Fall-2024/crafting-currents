@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CraftingCurentsMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab>  CRAFTING_CURRENTS_ITEMS_TAB = CREATIVE_MODE_TABS.register("crafting_currents_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CC_LOGO.get()))
                     .title(Component.translatable("creativetab.craftingcurrentsmod.craftingcurrents_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                       output.accept(ModItems.ALEXANDRITE.get());
@@ -24,14 +24,13 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final RegistryObject<CreativeModeTab>  CRAFTING_CURRENTS_BLOCKS_TAB = CREATIVE_MODE_TABS.register("crafting_currents_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BI_SIGNAL_CONVERTER.get()))
                     .withTabsBefore(CRAFTING_CURRENTS_ITEMS_TAB.getId())
                     .title(Component.translatable("creativetab.craftingcurrentsmod.craftingcurrents_block"))
                     .displayItems((itemDisplayParameters, output) -> {
-                      output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
-                      output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
                       output.accept(ModBlocks.BI_SIGNAL_CONVERTER.get());
                       output.accept(ModBlocks.REDSTONE_CONVERTER.get());
+                      output.accept(ModBlocks.BI_SIGNAL_BUS.get());
 
                     }).build());
 
