@@ -1,6 +1,7 @@
 package net.craftingCurrents.craftingCrurentsMod.block;
 
 import net.craftingCurrents.craftingCrurentsMod.CraftingCurentsMod;
+import net.craftingCurrents.craftingCrurentsMod.block.custom.RedstoneConverter;
 import net.craftingCurrents.craftingCrurentsMod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
