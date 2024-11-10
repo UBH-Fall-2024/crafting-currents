@@ -4,14 +4,24 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
 public class RedstoneConverter extends Block {
+
+    // Direction Property
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     // Define distinct properties for the left and right signals
     public static final BooleanProperty LEFT_SIGNAL = BooleanProperty.create("left_signal");
@@ -22,6 +32,7 @@ public class RedstoneConverter extends Block {
         // Set default state for both signals to false (no signal)
         this.registerDefaultState(this.defaultBlockState().setValue(LEFT_SIGNAL, false).setValue(RIGHT_SIGNAL, false));
     }
+
 
     @Nullable
     @Override
@@ -54,7 +65,6 @@ public class RedstoneConverter extends Block {
         // Register the LEFT_SIGNAL and RIGHT_SIGNAL properties
         builder.add(LEFT_SIGNAL, RIGHT_SIGNAL);
     }
-
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {

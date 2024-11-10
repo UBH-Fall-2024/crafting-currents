@@ -1,6 +1,7 @@
 package net.craftingCurrents.craftingCrurentsMod.block;
 
 import net.craftingCurrents.craftingCrurentsMod.CraftingCurentsMod;
+import net.craftingCurrents.craftingCrurentsMod.block.custom.RedstoneConverter;
 import net.craftingCurrents.craftingCrurentsMod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -31,8 +32,8 @@ public class ModBlocks {
 
     // 2 redstone input 2 blue output block
     public static final RegistryObject<Block> REDSTONE_CONVERTER= registerBlock("redstone_converter",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .requiresCorrectToolForDrops().instabreak()));
+            () -> new RedstoneConverter(BlockBehaviour.Properties.of()
+                   .instabreak()));
 
     //CALL THIS METHOD WHEN CREATING NEW BLOCKS
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
